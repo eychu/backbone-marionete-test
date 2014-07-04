@@ -6,7 +6,7 @@ Moar.Models = Moar.Models or {}
 
   Moar.Models.User = Backbone.Model.extend(
     #todo переделать роуты
-    urlRoot: 'http://inhouse.local1/api/frontend/users/'
+    urlRoot: 'http://inhouse.local1.test/api/frontend/users/'
     initialize: ->
 
     defaults: {}
