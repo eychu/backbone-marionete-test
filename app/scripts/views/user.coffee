@@ -4,7 +4,7 @@ Moar.Views = Moar.Views or {}
 (->
   'use strict'
 
-  Moar.Views.User = Backbone.View.extend(
+  class Moar.Views.User extends Backbone.View
     template: JST['app/scripts/templates/user.ejs']
     tagName: 'div'
     id: ''
@@ -17,6 +17,5 @@ Moar.Views = Moar.Views or {}
     render: ->
       @$el.html @template(@model.toJSON())
       return
-  )
-  return
+
 )()

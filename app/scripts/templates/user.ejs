@@ -1,1 +1,79 @@
-<%= username %>
+<div id='user-info'>
+
+  <table class='table'>
+    <tbody>
+
+      <tr>
+        <td class='span4'>User ID</td>
+        <td><%= id %></td>
+      </tr>
+
+      <tr>
+        <td>Created At</td>
+        <td>
+          <span title='<%= created_at %>'>
+          </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Email</td>
+        <td><a href='mailto:<%= username %>'><%= username %></a></td>
+      </tr>
+
+
+    <% if( api_access_token ) { %>
+      <tr>
+        <td>Api access token</td>
+        <td>
+          <span id='api-access-token'><%= api_access_token %></span>
+            <button id='api-access-token-renew' class='btn btn-primary' title='update'><i class='icon icon-white icon-refresh'></i></button>
+        </td>
+      </tr>
+    <% } %>
+
+    </tbody>
+  </table>
+
+
+
+  <% var permissions_by_kinds = permissions.reduce(function(gr, perm) { %>
+  <%   var kind; %>
+  <%   kind = perm.kind; %>
+  <%   if (kind in gr) { %>
+  <%     gr[kind].push(perm); %>
+  <%   } else { %>
+  <%     gr[kind] = [perm]; %>
+  <%   } %>
+  <%   return gr; %>
+  <% }, {}); %>
+
+  <div class='accordion'>
+    <div class='accordion-group'>
+      <div class='accordion-heading country'>
+        <a class='accordion-toggle' data-toggle='collapse' href='#user-permissions-data'>Permissions (<%= permissions.length %>)</a>
+      </div>
+      <div id='user-permissions-data' class='accordion-body collapse'>
+        <div class='accordion-inner'>
+          <% for(var kind in permissions_by_kinds) { %>
+            <div class='control-group' >
+              <label class='control-label'> <%= kind %> </label>
+              <div class='controls'>
+                <ul class='well.well-small.unstyled'>
+                  <% var permissions = permissions_by_kinds[kind].sort(function(a, b) { return a.ordering - b.ordering; }) %>
+                  <% for(var i = 0; i < permissions.length; ++i) { %>
+                    <% var permission = permissions[i] %>
+                    <li>
+                      <label> <%= 'user can_' + permission.action + '_' + permission.model_name.toLowerCase() %> </label>
+                    </li>
+                  <% } %>
+                </ul>
+              </div>
+            <div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
