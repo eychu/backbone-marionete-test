@@ -12,8 +12,6 @@ Moar.Models = Moar.Models or {}
     defaults: {}
     validate: (attrs, options) ->
 
-    parse: (response, options) ->
-      response
   )
   return
 )()
