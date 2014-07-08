@@ -12,11 +12,11 @@ Moar.Models = {}
 Moar.Collections = {}
 Moar.Views = { Users: {} }
 Moar.Routers = {}
+Moar.Controllers = {}
 
 Moar.addInitializer ->
   usersRouter = new Moar.Routers.Users
   Backbone.history.start()
-
 
 Moar.addRegions
   content: "#content"
