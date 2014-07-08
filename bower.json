@@ -9,7 +9,8 @@
     "modernizr": "~2.7.1",
     "mocha": "~1.14.0",
     "chai": "~1.8.1",
-    "grunt-mocha": "~0.4.11"
+    "grunt-mocha": "~0.4.11",
+    "marionette": "~2.0.1"
   },
   "devDependencies": {}
 }

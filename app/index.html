@@ -21,15 +21,15 @@
 
 
         <div class="container">
-            <div class="header">
+            <div id="header">
               <a href="#users/96"> user </a>
             </div>
 
-            <div class="content">
+            <div id="content">
             </div>
 
 
-            <div class="footer">
+            <div id="footer">
             </div>
 
         </div>
@@ -38,6 +38,7 @@
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/underscore/underscore.js"></script>
         <script src="bower_components/backbone/backbone.js"></script>
+        <script src="bower_components/marionette/lib/backbone.marionette.js"></script>
         <!-- endbuild -->
 
         <!-- build:js scripts/plugins.js -->
@@ -59,9 +60,10 @@
         <script src="scripts/vendor/routes.js"></script>
         <script src="scripts/main.js"></script>
         <script src="scripts/templates.js"></script>
-        <script src="scripts/views/user.js"></script>
+        <script src="scripts/views/users/layout.js"></script>
+        <script src="scripts/views/users/show.js"></script>
         <script src="scripts/models/user.js"></script>
-        <script src="scripts/routes/user.js"></script>
+        <script src="scripts/routes/users.js"></script>
         <!-- endbuild -->
 </body>
 </html>
