@@ -1,0 +1,41 @@
+<td data-name="<%= name %>">
+  <a class="navigate" href="<%=  name %>"><%= name %></a>
+  <br/>
+  <%= datatype %>
+</td>
+<td data-tag="<%= tag %>">
+  <%= tag %>
+</td>
+<td data-enabled="<%= enabled %>">
+  <% if( enabled ) { %>
+    <span class="label label-success">
+      enabled
+    </span>
+  <% } else { %>
+    <span class="label label-important">
+      disabled
+    </span>
+  <% } %>
+</td>
+<td data-mandatory="<%= mandatory %>">
+  <% if( mandatory ) { %>
+  <span class="label label-info">
+    mandatory
+  </span>
+  <% } else { %>
+  <span>
+    not_mandatory
+  </span>
+  <% } %>
+</td>
+<td>
+  <div class="pull-right">
+    <a class="navigate btn btn-mini" href="<%= mandatory %>">
+      <i class="icon icon-pencil"></i>
+    </a>
+
+    <a class="btn btn-mini btn-danger js-destroy" href="javascript:void(0);">
+      <i class="icon icon-trash icon-white"></i>
+    </a>
+  </div>
+</td>
