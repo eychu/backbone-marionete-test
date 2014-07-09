@@ -10,12 +10,13 @@ window.Moar = new Backbone.Marionette.Application()
 
 Moar.Models = {}
 Moar.Collections = {}
-Moar.Views = { Users: {} }
+Moar.Views = { Users: {}, MetadataTypes: {} }
 Moar.Routers = {}
 Moar.Controllers = {}
 
 Moar.addInitializer ->
   usersRouter = new Moar.Routers.Users
+  metadataTypesRouter = new Moar.Routers.MetadataTypes
   Backbone.history.start()
 
 Moar.addRegions

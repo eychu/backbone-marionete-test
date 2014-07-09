@@ -7,5 +7,5 @@ class Moar.Controllers.Users extends Backbone.Marionette.Controller
     usersLayout = @layout
     user.fetch().done ->
       Moar.content.show usersLayout
-      usersShow = new Moar.Views.Users.Show model: user
-      usersLayout.content.show usersShow
+      userShow = new Moar.Views.Users.Show model: user
+      usersLayout.content.show userShow
