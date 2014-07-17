@@ -1,0 +1,159 @@
+<form class="form form-horizontal" action="javascript:void(0);">
+
+  <div class="control-group">
+    <div class="controls">
+      <label class="checkbox">
+        <input type="checkbox" name="enabled">
+        Включено
+      </label>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label">
+      Название
+      <span class="required-asterisk" style="color:red;">
+        *
+      </span>
+    </label>
+  </div>
+
+  <div class="controls">
+    <span class="control-wrap">
+      <input type="text" name="name" class="span12">
+    </span>
+    <div class="help-block">
+      Укажите название дополнительного поля
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label">
+      Имя для API
+      <span class="required-asterisk" style="color:red;">
+        *
+      </span>
+    </label>
+    <div class="controls">
+      <span class="control-wrap">
+        <input type="text" name="tag" class="span12">
+      </span>
+      <div class="help-block">
+        Укажите системное название поля. Разрешены только строчные буквы латинского алфавита и цифры. Первым символом может быть только латинская буква (примеры: director, studio, genre, step1)
+      </div>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label">
+      Тип данных
+    </label>
+    <div class="controls">
+      <span class="control-wrap">
+        <div class="select2-container span12">
+          <a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">
+            <span class="select2-chosen">
+              Логическое
+            </span>
+            <abbr class="select2-search-choice-close"></abbr>
+            <span class="select2-arrow"><b></b></span>
+          </a>
+          <input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen3">
+        </div>
+        <select name="datatype" class="span12 select2-offscreen" tabindex="-1">
+          <option value="string">
+            Текст
+          </option>
+          <option value="text">
+            Большой текст
+          </option>
+          <option value="date">
+            Дата
+          </option>
+          <option value="datetime">
+            Дата и время
+          </option>
+          <option value="number">
+            Число
+          </option>
+          <option value="boolean">
+            Логическое
+          </option>
+          <option value="array">
+            Выбор из списка
+          </option>
+        </select>
+      </span>
+      <div style="clear:both;"></div>
+      <div class="help-block">
+        <table class="table table-bordered table-hover table-condensed">
+          <tbody>
+            <tr>
+              <td>
+                <b>Текст</b>
+              </td>
+              <td>
+                однострочное поле для ввода текста длинной до 255 символов
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b>Большой текст</b>
+              </td>
+              <td>
+                многострочное поле для ввода текста длинее 255 символов
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b>Дата</b>
+              </td>
+              <td>
+                поле для ввода даты (с выпадающим календарем)
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b>Дата и время</b>
+              </td>
+              <td>
+                поле для ввода даты и времени (с выпадающим календарем)
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b>Число</b>
+              </td>
+              <td>
+                поле, в которое можно ввести только цифры
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b>Логическое</b>
+              </td>
+              <td>
+                поле с выбором из двух значений: Да или Нет
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b>Выбор из списка</b>
+              </td>
+              <td>
+                поле с выпадающем списком заранее заданных значений
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <button class="btn btn-primary" type="submit">
+      Сохранить
+    </button>
+  </div>
+
+</form>
