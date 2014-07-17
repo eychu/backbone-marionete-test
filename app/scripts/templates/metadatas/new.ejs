@@ -50,17 +50,7 @@
     </label>
     <div class="controls">
       <span class="control-wrap">
-        <div class="select2-container span12">
-          <a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">
-            <span class="select2-chosen">
-              Логическое
-            </span>
-            <abbr class="select2-search-choice-close"></abbr>
-            <span class="select2-arrow"><b></b></span>
-          </a>
-          <input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen3">
-        </div>
-        <select name="datatype" class="span12 select2-offscreen" tabindex="-1">
+        <select id="datatype" class="span12 select2">
           <option value="string">
             Текст
           </option>
@@ -79,7 +69,7 @@
           <option value="boolean">
             Логическое
           </option>
-          <option value="array">
+          <option value="select">
             Выбор из списка
           </option>
         </select>
@@ -149,6 +139,8 @@
       </div>
     </div>
   </div>
+
+  <div id="datatype-layout"></div>
 
   <div class="form-actions">
     <button class="btn btn-primary" type="submit">
